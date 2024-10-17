@@ -1,0 +1,8 @@
+sudo systemctl enable snapd &&
+sudo systemctl start docker &&
+sudo groupadd docker &&
+sudo usermod -aG docker $USER &&
+newgrp docker &&
+sudo service docker restart &&
+sudo systemctl enable docker.service &&
+sudo systemctl enable containerd.service
