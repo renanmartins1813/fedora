@@ -17,4 +17,5 @@ sudo dnf config-manager \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash &&
 sudo dnf check-update &&
 sudo dnf group update core -y &&
-sudo dnf install dnf-plugins-core -y
+sudo dnf install dnf-plugins-core -y &&
+sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:justkidding/Fedora_40/home:justkidding.repo -y

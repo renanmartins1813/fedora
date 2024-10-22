@@ -1,4 +1,5 @@
 sudo dnf -y install make gcc rusto cargo rust-src rustfmt golang php-cli pyhton3-pip swiftlang java-openjdk git fd-find unzip unrar libevent-devel ncurses-devel bison pkg-config tmux lua vim neovim ripgrep lazygit codeblocks codeblocks-* zlib* python3-dnf-plugin-tracer php yarn vlc mpv chromium opera-stable brave-browser gnome-tweaks gnome-tweak-tool gnome-extensions-app telegram-desktop discord code docker-ce docker-ce-cli containerd.io docker-compose-plugin gimp gparted dnfdragora qbittorrent emacs snapd &&
 sudo dnf copr enable elxreno/preload -y && sudo dnf install preload -y &&
-sudo dnf install -y eclipse
+sudo dnf install -y eclipse &&
+sudo dnf install -y ueberzugpp &&
 flatpak -y install flathub md.obsidian.Obsidian com.stremio.Stremio io.github.lainsce.Khronos io.github.seadve.Mousai com.github.huluti.Curtail com.github.flxzt.rnote &&
