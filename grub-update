@@ -1,0 +1,39 @@
+-- update grub
+	--edit the grub config file with sudo to add those lines below
+	sudo vi /etc/default/grub
+		GRUB_TIMEOUT=45
+		GRUB_DEFAULT=saved
+		GRUB_SAVEDEFAULT=true
+
+	--remake the grub.cfg with the new default changes
+		sudo su -
+		grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
+In Fedora, the /etc/grub2.cfg symlink points at the BIOS version. On a UEFI system, use:
+
+$ sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+In CentOS:
+
+$ sudo grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+
+Generally, you could use instead:
+
+$ sudo grub2-mkconfig -o $(readlink -f /etc/grub2-efi.cfg)
+
+See https://docs.fedoraproject.org/en-US/fedora/f27/system-administrators-guide/kernel-module-driver-configuration/Working_with_the_GRUB_2_Boot_Loader/index.html#sec-Editing_a_Menu_Entry
+In Fedora, the /etc/grub2.cfg symlink points at the BIOS version. On a UEFI system, use:
+
+$ sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+In CentOS:
+
+$ sudo grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
+
+Generally, you could use instead:
+
+$ sudo grub2-mkconfig -o $(readlink -f /etc/grub2-efi.cfg)
+
+See https://docs.fedoraproject.org/en-US/fedora/f27/system-administrators-guide/kernel-module-driver-configuration/Working_with_the_GRUB_2_Boot_Loader/index.html#sec-Editing_a_Menu_Entry
+
